@@ -32,6 +32,7 @@ aliceblue = (240, 248, 255)
 black = (0, 0, 0)
 skyblue = (135,206,235)
 gray20 = (51, 51, 51)
+violetred2 = (238,58,140)
 
 font = pygame.font.SysFont("Arial", 25)
 
@@ -45,7 +46,7 @@ class Balloon:
         self.speed = -speed
         self.proPool= [-1, -1, -1, 0, 0, 0, 0, 1, 1, 1]
         self.length = random.randint(50, 100)
-        self.color = random.choice([red1, green1, magenta3, orangered1, gold1, blue, aliceblue])
+        self.color = random.choice([red1, green1, magenta3, orangered1, gold1, blue, aliceblue, violetred2])
         
     def move(self):
         direct = random.choice(self.proPool)
@@ -90,7 +91,7 @@ class Balloon:
         self.speed -= 0.002
         self.proPool = [-1, -1, -1, 0, 0, 0, 0, 1, 1, 1]
         self.length = random.randint(50, 100)
-        self.color = random.choice([red1, green1, magenta3, orangered1, gold1, blue, aliceblue])
+        self.color = random.choice([red1, green1, magenta3, orangered1, gold1, blue, aliceblue, violetred2])
        
 balloons = []
 noBalloon = 10
