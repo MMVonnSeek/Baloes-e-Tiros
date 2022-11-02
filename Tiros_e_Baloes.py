@@ -9,7 +9,7 @@ width = 700
 height = 600
 
 display = pygame.display.set_mode((width, height))
-pygame.display.set_caption("Max Muller - Jogo Tiro no Balão")
+pygame.display.set_caption("Max Muller - Jogo Atire nos Balões")
 clock = pygame.time.Clock()
 
 margin = 100
@@ -19,15 +19,19 @@ score = 0
 
 white = (230, 230, 230)
 lightBlue = (4, 27, 96)
-red = (231, 76, 60)
+red1 = (255, 0, 0)
 lightGreen = (25, 111, 61)
 darkGray = (40, 55, 71)
 darkBlue = (64, 178, 239)
-green = (35, 155, 86)
-yellow = (244, 208, 63)
+green1 = (0, 255, 0)
+gold1 = (255,215,0)
 blue = (46, 134, 193)
-purple = (155, 89, 182)
-orange = (243, 156, 18)
+magenta3 = (205,0,205)
+orangered1 = (255,69,0)
+aliceblue = (240, 248, 255)
+black = (0, 0, 0)
+skyblue = (135,206,235)
+gray20 = (51, 51, 51)
 
 font = pygame.font.SysFont("Arial", 25)
 
@@ -41,7 +45,7 @@ class Balloon:
         self.speed = -speed
         self.proPool= [-1, -1, -1, 0, 0, 0, 0, 1, 1, 1]
         self.length = random.randint(50, 100)
-        self.color = random.choice([red, green, purple, orange, yellow, blue])
+        self.color = random.choice([red1, green1, magenta3, orangered1, gold1, blue, aliceblue])
         
     def move(self):
         direct = random.choice(self.proPool)
@@ -65,7 +69,7 @@ class Balloon:
             self.reset()
             
     def show(self):
-        pygame.draw.line(display, darkBlue, (self.x + self.a/2, self.y + self.b), (self.x + self.a/2, self.y + self.b + self.length))
+        pygame.draw.line(display, gray20, (self.x + self.a/2, self.y + self.b), (self.x + self.a/2, self.y + self.b + self.length))
         pygame.draw.ellipse(display, self.color, (self.x, self.y, self.a, self.b))
         pygame.draw.ellipse(display, self.color, (self.x + self.a/2 - 5, self.y + self.b - 3, 10, 10))
             
@@ -86,7 +90,7 @@ class Balloon:
         self.speed -= 0.002
         self.proPool = [-1, -1, -1, 0, 0, 0, 0, 1, 1, 1]
         self.length = random.randint(50, 100)
-        self.color = random.choice([red, green, purple, orange, yellow, blue])
+        self.color = random.choice([red1, green1, magenta3, orangered1, gold1, blue, aliceblue])
        
 balloons = []
 noBalloon = 10
@@ -107,7 +111,7 @@ def pointer():
     color = lightGreen
     for i in range(noBalloon):
         if isonBalloon(balloons[i].x, balloons[i].y, balloons[i].a, balloons[i].b, pos):
-            color = red
+            color = black
     pygame.draw.ellipse(display, color, (pos[0] - r/2, pos[1] - r/2, r, r), 4)
     pygame.draw.line(display, color, (pos[0], pos[1] - l/2), (pos[0], pos[1] - l), 4)
     pygame.draw.line(display, color, (pos[0] + l/2, pos[1]), (pos[0] + l, pos[1]), 4)
@@ -118,8 +122,8 @@ def lowerPlatform():
     pygame.draw.rect(display, darkGray, (0, height - lowerBound, width, lowerBound))
     
 def showScore():
-    scoreText = font.render("Balloons Bursted : " + str(score), True, white)
-    display.blit(scoreText, (150, height - lowerBound + 50))
+    scoreText = font.render("Balões Estourados: " + str(score), True, white)
+    display.blit(scoreText, (220, height - lowerBound + 40))
     
 def close():
     pygame.quit()
@@ -144,7 +148,7 @@ def game():
                 for i in range(noBalloon):
                     balloons[i].burst()
 
-        display.fill(lightBlue)
+        display.fill(skyblue)
         
         for i in range(noBalloon):
             balloons[i].show()
