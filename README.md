@@ -11,4 +11,6 @@ O enredo deste jogo é simples, haverá balões se movendo por toda a tela. O jo
 
 Para o desenvolvimento do jogo atire nos balões usando PyGame, usaremos vários módulos pygame para adicionar diferentes funcionalidades ao jogo. Temos que codificar para o movimento contínuo dos balões, uma funcionalidade de tiro e atualizar a pontuação toda vez que o balão for estourado. Todas essas funções podem ser feitas usando vários módulos como desenhar, mouse, renderizar, etc.
 
+Para a cor e forma do balão, faremos uso do módulo de desenho que fornece várias funções para formas como elipses, círculos, etc. Portanto, para interagir com o sistema e principalmente adicionar funcionalidades como sair do jogo e retomar o game, usaremos o módulo sys e adicionaremos funcionalidades baseadas em eventos aleatórios, usaremos a biblioteca random. Além dessas bibliotecas, também usaremos o módulo math.
+
 ![Captura de tela de 2022-11-02 17-28-55](https://user-images.githubusercontent.com/89359847/199596130-4d39d6ef-9671-4247-8ea8-0927dfa8c6d6.png)
