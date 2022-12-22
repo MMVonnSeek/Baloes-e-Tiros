@@ -1,6 +1,6 @@
 # Atire nos Balões :balloon: :balloon: :balloon:
 
-Vou desenvolver um jogo Atire nos Balões totalmente funcional e completo usando a biblioteca do python **_pygame_**. Então, vamos começar e desenvolver mais um
+Vou desenvolver o jogo Atire nos Balões totalmente funcional e completo usando a biblioteca do python **_pygame_**. Então, vamos começar e desenvolver mais um
 projeto que certamente o ajudará a aprimorar seus conceitos.
 
 # Do que se trata o jogo?
