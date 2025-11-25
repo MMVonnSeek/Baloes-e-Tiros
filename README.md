@@ -1,4 +1,8 @@
-# Atire nos Balões :balloon: :balloon: :balloon:
+# Balões e Tiros – Jogo Desenvolvido em Python com Pygame
+
+![Autor: Max Muller](https://img.shields.io/badge/Autor-Max%20Muller-blue?style=for-the-badge&logo=github)
+![Python](https://img.shields.io/badge/Python-Pygame-yellow?style=for-the-badge&logo=python)
+
 
 Vou desenvolver o jogo Atire nos Balões totalmente funcional e completo usando a biblioteca do python **_pygame_**. Então, vamos começar e desenvolver mais um
 projeto que certamente o ajudará a aprimorar seus conceitos.
